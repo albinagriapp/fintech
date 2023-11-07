@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "Kadam@910",
+    "password": "root",
     "database": "payopt_dev",
     "host": "127.0.0.1",
     "dialect": "mysql"

@@ -28,7 +28,6 @@ async function sendUserOTPService(mobileNumber) {
 }
 
 async function verifyUserOTPService({ mobileNumber, otp }) {
-  console.log({ mobileNumber, otp });
   const apiResponse = await axiosAPI({
     baseURL: process.env.BASE_URL,
     url: "/TokenAuth/VerifyOTPForCreditLine",
