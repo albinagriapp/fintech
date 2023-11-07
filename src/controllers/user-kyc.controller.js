@@ -35,7 +35,7 @@ async function updateUserOccupationDetails(req, res) {
 
 async function uploadUserDocuments(req, res) {
   try {
-    if (!req.files?.document) {
+    if (!req.files.document) {
       return res.status(400).json({ message: "No files were uploaded" });
     }
     const response = await uploadUserDocumentsService(

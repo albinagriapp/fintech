@@ -24,7 +24,7 @@ async function updateUserPersonalInfoService(userId, mobileNumber, data = {}) {
     },
     requestBody: { ...data, customerId: userId, mobileNumber },
   });
-  if (!apiResponse?.result?.status === "True") {
+  if (!apiResponse.result.status === "True") {
     return _400({ message: apiResponse?.result?.error });
   }
   data.otherDetails = JSON.stringify(data);
@@ -66,7 +66,7 @@ async function uploadUserDocumentsService(userId, document, params) {
       documentType: type,
     },
   });
-  if (!data?.success || !data.result) {
+  if (!data.success || !data.result) {
     return _400({
       message: data?.error?.message,
       errors: data?.error?.validationErrors,
@@ -102,7 +102,7 @@ async function getUserKycDetailsService(MobileNumber) {
       MobileNumber,
     },
   });
-  if (apiResponse?.result && apiResponse?.result?.object) {
+  if (apiResponse.result && apiResponse.result.object) {
     return _200({
       message: "User details fetched successfully!",
       data: apiResponse?.result?.object?.message,

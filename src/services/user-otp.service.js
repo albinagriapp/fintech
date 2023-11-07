@@ -41,7 +41,7 @@ async function verifyUserOTPService({ mobileNumber, otp }) {
       otpFunctionId: 10,
     },
   });
-  if (apiResponse?.result?.status === "True" && apiResponse.result.object) {
+  if (apiResponse.result.status === "True" && apiResponse.result.object) {
     const user = await createUser({
       id: apiResponse.result.object?.customerId,
       mobileNumber,
