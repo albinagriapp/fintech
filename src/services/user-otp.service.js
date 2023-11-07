@@ -18,7 +18,7 @@ async function sendUserOTPService(mobileNumber) {
       otpFunctionId: 10,
     },
   });
-  if (!apiResponse.result || apiResponse?.result?.status === "False") {
+  if (!apiResponse.result || apiResponse.result.status === "False") {
     return _400({ message: "Service not available or Limit exceeded!" });
   }
   return _200({
