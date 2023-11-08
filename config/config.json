@@ -3,7 +3,7 @@
     "username": "admin",
     "password": "Agap@dm!n",
     "database": "payopt",
-    "host": "3.6.27.191:3306",
+    "host": "3.6.27.191",
     "dialect": "mysql"
   },
   "qa": {
