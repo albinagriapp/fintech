@@ -12,6 +12,10 @@ app.use(fileUpload());
 
 app.use("/api/v1", routes);
 
+app.get("/", (req, res) => {
+  res.send("API Documentation");
+});
+
 app.get("/health-check", (req, res) => {
   res.send("Server is running...");
 });
